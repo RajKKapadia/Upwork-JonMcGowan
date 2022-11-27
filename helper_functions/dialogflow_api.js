@@ -36,7 +36,7 @@ const detectIntent = async (languageCode, queryText, sessionId) => {
             text: result.fulfillmentText
         };
     } catch (error) {
-        console.log(`Error at dialogflow-api.js detectIntent --> ${error}`);
+        console.log(`Error at dialogflow_api.js detectIntent --> ${error}`);
         return {
             status: 0,
             text: 'Error at dialogflow detect intent.'

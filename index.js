@@ -1,9 +1,11 @@
 const express = require('express');
 const cors = require('cors');
+require('dotenv').config();
 
 const webApp = express();
 
-const PORT = process.env.PORT || 5000;
+const { API_PORT } = process.env;
+const PORT = process.env.PORT || API_PORT;
 
 webApp.use(
     express.urlencoded(
