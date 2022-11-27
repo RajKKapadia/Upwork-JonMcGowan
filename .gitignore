@@ -1,3 +1,4 @@
 /node_modules
+.env
 package-lock.json
 youtubedemo-rwcl-27d3c4932c20.json
