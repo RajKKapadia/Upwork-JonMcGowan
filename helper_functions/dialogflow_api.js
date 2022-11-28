@@ -1,7 +1,7 @@
 const dialogflow = require('@google-cloud/dialogflow');
-const fs = require('fs');
+require('dotenv').config();
 
-const CREDENTIALS = JSON.parse(fs.readFileSync('./youtubedemo-rwcl-27d3c4932c20.json', 'utf-8'));
+const CREDENTIALS = JSON.parse(process.env.CREDENTIALS);
 
 const PROJECID = CREDENTIALS.project_id;
 
@@ -10,9 +10,9 @@ const CONFIGURATION = {
         private_key: CREDENTIALS.private_key,
         client_email: CREDENTIALS.client_email
     }
-}
+};
 
-const sessionClient = new dialogflow.SessionsClient(CONFIGURATION);
+const sessionClient = new dialogflow.SessionsClient();
 
 const detectIntent = async (languageCode, queryText, sessionId) => {
 

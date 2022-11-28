@@ -24,6 +24,9 @@ router.post('/twilio', async (req, res) => {
             );
 
             console.info(intentData);
+
+            // We want to send this response to DB...
+
         } catch (error) {
             console.error(`Error at twilio route - ${error}`);
         }
