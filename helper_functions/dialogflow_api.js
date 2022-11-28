@@ -12,7 +12,7 @@ const CONFIGURATION = {
     }
 };
 
-const sessionClient = new dialogflow.SessionsClient();
+const sessionClient = new dialogflow.SessionsClient(CONFIGURATION);
 
 const detectIntent = async (languageCode, queryText, sessionId) => {
 
